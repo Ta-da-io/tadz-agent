@@ -1,0 +1,355 @@
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+/* Token Overview section */
+.token-overview {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Security Analysis section */
+.security-analysis {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.charts-container {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Liquidity Info section */
+.liquidity-info {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Top Holders section */
+.top-holders {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Hover effects */
+.token-overview:hover,
+.security-analysis:hover,
+.liquidity-info:hover,
+.top-holders:hover {
+  background: rgba(40, 40, 40, 0.8);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Section headers */
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-icon {
+  color: #ffffff;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.toggle-label {
+  color: #8B949E;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.toggle-label.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.view-switch {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.view-switch.ant-switch-checked {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.chart-container {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 600px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.chart-container > div {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: calc(100% - 40px) !important;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-content {
+    padding: 10px;
+  }
+}
+
+.placeholder-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: #8B949E;
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 15px;
+  }
+  
+  .content-grid,
+  .charts-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding: 10px;
+    height: auto;
+    min-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .content-grid,
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .token-overview,
+  .security-analysis,
+  .liquidity-info,
+  .top-holders {
+    padding: 15px;
+  }
+}
+
+.alert-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.alert-message {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.telegram-icon {
+  font-size: 3rem;
+  color: #229ED9;
+  flex-shrink: 0;
+}
+
+.alert-text {
+  color: #ffffff;
+}
+
+.alert-text h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.alert-text ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.alert-text a {
+  color: #229ED9;
+  text-decoration: none;
+}
+
+.alert-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .alert-message {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .alert-text ol {
+    text-align: left;
+  }
+}
+
+.coming-soon-section {
+  padding: 20px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.coming-soon-section h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.coming-soon-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.coming-soon-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.coming-soon-card .feature-icon {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.coming-soon-card h3 {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.coming-soon-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.soon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Make sure parent containers don't restrict height */
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Ensure content sections don't grow unnecessarily */
+.content-section {
+  flex-shrink: 0;
+}

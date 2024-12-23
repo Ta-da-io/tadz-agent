@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.header-item {
+  background-color: #333;
+  border-radius: 25px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-item:hover {
+  background-color: #444;
+}
+
+/* Ensure proper spacing between components */
+.header > * {
+  margin-left: 10px;
+}
+
+.header > *:first-child {
+  margin-left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .header {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .header-item {
+    padding: 8px 16px;
+  }
+} 

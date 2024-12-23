@@ -1,0 +1,19 @@
+.floating-oracle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oracle-image {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hide on mobile */
+@media (max-width: 900px) {
+  .floating-oracle {
+    display: none;
+  }
+}

@@ -1,0 +1,161 @@
+.transaction-history {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-header {
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.history-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8B949E;
+  font-size: 1rem;
+}
+
+.transactions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 600px;
+  padding-right: 10px;
+}
+
+.transaction-card {
+  background: rgba(15, 15, 15, 0.8);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-type {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.transaction-type.buy {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+}
+
+.transaction-type.sell {
+  background: rgba(239, 68, 68, 0.2);
+  color: #EF4444;
+}
+
+.transaction-date {
+  color: #8B949E;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.transaction-amount {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.label {
+  color: #8B949E;
+  font-size: 14px;
+  min-width: 40px;
+}
+
+.address {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  flex: 1;
+}
+
+.address:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+.transactions-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transactions-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.transactions-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.transactions-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .transactions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+
+  .transaction-card {
+    padding: 12px;
+  }
+
+  .transaction-amount {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions-grid {
+    grid-template-columns: 1fr;
+  }
+} 

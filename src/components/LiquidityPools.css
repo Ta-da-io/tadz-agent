@@ -1,0 +1,50 @@
+.liquidity-pools {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Custom styles for the Ant Design table */
+.liquidity-pools .ant-table {
+  background: transparent;
+}
+
+.liquidity-pools .ant-table-thead > tr > th {
+  background: rgba(17, 25, 40, 0.8);
+  color: #63b3ed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.liquidity-pools .ant-table-tbody > tr > td {
+  background: rgba(17, 25, 40, 0.8);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.liquidity-pools .ant-table-tbody > tr:hover > td {
+  background: rgba(99, 179, 237, 0.1) !important;
+}
+
+.liquidity-pools .ant-card {
+  background: transparent;
+  border: none;
+}
+
+.liquidity-pools .ant-card-head-title {
+  color: white;
+}
+
+.liquidity-pools .ant-typography {
+  color: #63b3ed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .liquidity-pools {
+    padding: 15px;
+  }
+  
+  .liquidity-pools .ant-table {
+    font-size: 0.9rem;
+  }
+} 

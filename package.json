@@ -1,0 +1,75 @@
+{
+  "name": "tadz-oracle-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@n8n/chat": "^0.27.1",
+    "@nivo/bar": "^0.88.0",
+    "@nivo/pie": "^0.88.0",
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.98.0",
+    "@supabase/supabase-js": "^2.47.10",
+    "antd": "^5.22.5",
+    "chart.js": "^4.4.7",
+    "cra-template": "1.2.0",
+    "date-fns": "^4.1.0",
+    "lottie-react": "^2.4.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.6",
+    "react-icons": "^5.4.0",
+    "react-resizable": "^3.0.5",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.15.0",
+    "supabase": "^2.1.1",
+    "three": "^0.171.0",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "https-browserify": "^1.0.0",
+    "nth-check": "^2.1.1",
+    "os-browserify": "^0.3.0",
+    "postcss": "^8.4.49",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.4",
+    "vm-browserify": "^1.1.2"
+  }
+}
